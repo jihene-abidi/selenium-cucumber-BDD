@@ -24,10 +24,13 @@ public class LoginPage extends BasePage {
     @FindBy(how = How.CSS, using = "input[value='Log in']")
     private static WebElement btnLogin;
 
+    @FindBy(how = How.CSS, using = ".ico-logout")
+    private static WebElement logoutMenu;
+
     public LoginPage() {
         super(Setup.getDriver());
     }
-    
+
     public static void openURL(String url) {
         Setup.getDriver().get(url);
     }
@@ -46,6 +49,10 @@ public class LoginPage extends BasePage {
 
     public static void clickOnBtnLogin() {
         btnLogin.click();
+    }
+
+    public static boolean isLogoutDisplayed() {
+        return logoutMenu.isDisplayed();
     }
 
 }

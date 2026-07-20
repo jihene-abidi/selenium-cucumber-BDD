@@ -9,4 +9,4 @@ Feature: Je souhaite tester la page login de l'application Demo Web Shop
     And Je saisie une adresse mail
     And Je saisie un mot de passe
     And Je clique sur le bouton login
-    Then Je me redirige vers la page home
+    Then Je me redirige vers la page home "ichrafbenmohamed@gmail.com"
